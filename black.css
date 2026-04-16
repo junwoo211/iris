@@ -1,8 +1,6 @@
-<!DOCTYPE html>
 
-<head>
 .drag-text::selection {
   color: yellow;
   background-color: purple;
 }
-</head>
+
