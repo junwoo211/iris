@@ -1,7 +1,6 @@
 <html>
 <head>
  <meta charset="UTF-8">
-<script src="ox.js"></script>
 </head>
 <body>
 <p style="color: red; text-align: center; font-size: 20px;">
@@ -15,7 +14,6 @@
 <br><br><br><br>
 <br><br>그럼 첫번째 문제 시작하겠습니다.
 <br><br><br><br>
-<br><br> <img src="1page.png">
 <br><br> <span style="font-size: 40px;">펭귄의 이름은?</span>
 <br><br><br><br><br><br>
 
