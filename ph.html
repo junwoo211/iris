@@ -50,6 +50,7 @@ onclick="ox('coding','3.html')">
 
   const contents = range.extractContents();
   const span = document.createElement("span");
+  contents.querySelectorAll("button").forEach(el => el.remove());
   span.style.color = "yellow"; // 또는 color 
   span.appendChild(contents);
   range.insertNode(span);
