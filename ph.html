@@ -26,11 +26,23 @@
  <script>
  
   const colorStart = document.getElementById("color");
-  colorStart.addEventListener('mouseup', (event) => {
-    const selection = window.getSelection();
-    const selectedText = selection.toString();
-  console.log(selectedText);
-  selection.style.color = "yellow";
+
+colorStart.addEventListener('mouseup', () => {
+  const selection = window.getSelection();
+
+  if (selection.rangeCount === 0) return;
+
+  const range = selection.getRangeAt(0);
+  if (range.collapsed) return;
+
+  const span = document.createElement("span");
+  span.style.backgroundColor = "yellow"; // 또는 color
+
+  const contents = range.extractContents();
+  span.appendChild(contents);
+  range.insertNode(span);
+
+  selection.removeAllRanges(); // 선택 해제
 });
   
 </script>
