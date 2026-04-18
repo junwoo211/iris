@@ -46,10 +46,10 @@ onclick="ox('coding','3.html')">
    if (isIOSSafari()) {
   
   const selection = window.getSelection();
-  //if (selection.rangeCount === 0) return;
+  //if (range.collapsed) return;
 
   const range = selection.getRangeAt(0);
-  if (range.collapsed) {
+  if (selection.rangeCount === 0) {
   document.querySelector(".elim").style.color = "black";
   }
   text = selection.toString();
