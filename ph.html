@@ -52,7 +52,6 @@ onclick="ox('coding','3.html')">
  <script>
 
   let selection;
-  let lastText = "";
   function isIOSSafari() {
   return /iPad|iPhone|iPod/.test(navigator.userAgent)
     || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
@@ -67,10 +66,9 @@ onclick="ox('coding','3.html')">
    if (isIOSSafari()) {
   
   selection = window.getSelection();
-  //if (range.collapsed) return;
-
-  const text = selection.toString();
-  if (text !== lastText) { 
+    spans.forEach(el => {
+    el.style.color = "black";
+  });
 
    container.querySelectorAll("span.color").forEach(el => {
     if (selection.containsNode(el, true)) {
@@ -78,8 +76,8 @@ onclick="ox('coding','3.html')">
     }
   });
  
-    lastText = text;
-  }}
+   
+  }
 
   // 선택 해제
 });
