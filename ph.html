@@ -6,12 +6,6 @@
 </head>
 
 <body style="background-color: black;">
-  <style>
-    /* ::selection {
-      background-color: red;
-      color: blue;
-    } */
-  </style>
 
   <p style="color: white; text-align: center; font-size: 30px;">
     <br><br><br><br>
@@ -47,7 +41,6 @@
 
     const container = document.getElementById("target");
 
-    // 텍스트를 span 요소로 변환
     text.split("").forEach(char => {
       if (char === "\n") {
         container.appendChild(document.createElement("br"));
@@ -60,13 +53,11 @@
       }
     });
 
-    // iOS Safari 체크
     function isIOSSafari() {
       return /iPad|iPhone|iPod/.test(navigator.userAgent)
         || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
     }
 
-    // 선택 감지 시 색상 변경
     document.addEventListener("selectionchange", () => {
       if (isIOSSafari()) {
         const selection = window.getSelection();
